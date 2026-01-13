@@ -4,8 +4,19 @@ public class Solution
 {
     public string solution(string my_string, int s, int e)
     {
-        char[] arr = my_string.ToCharArray();
-        Array.Reverse(arr, s, e - s + 1);
-        return new string(arr);
+        string answer = "";
+        for (int i = 0; i < my_string.Length; i++)
+        {
+            if (i >= s && i <= e)
+            {
+                answer += my_string[e + s - i];
+                Console.WriteLine(e + s - i);
+            }
+            else
+            {
+                answer += my_string[i];
+            }
+        }
+        return answer;
     }
 }
