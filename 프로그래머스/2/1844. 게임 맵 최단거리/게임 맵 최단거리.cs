@@ -35,9 +35,9 @@ public class Solution
                 int nx = cur.x + dx[dir];
                 int ny = cur.y + dy[dir];
 
-                if (nx < 0 || nx >= n || ny < 0 || ny >= m) continue;
-                if (dist[nx, ny] != -1) continue;
-                if (maps[nx, ny] == 0) continue;
+                if (nx < 0 || nx >= n || ny < 0 || ny >= m) { continue; }
+else if (dist[nx, ny] != -1) { continue; }
+else if (maps[nx, ny] == 0) { continue; }
 
                 dist[nx, ny] = dist[cur.x, cur.y] + 1;
                 q.Enqueue((nx, ny));
